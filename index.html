@@ -1,0 +1,522 @@
+---
+---
+
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>TweenDeck</title>
+  <meta name="description" content="Next level animation for web presentations">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,700,700i&amp;subset=latin-ext" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="shortcut icon" href="favicon.ico">
+  <style>
+    h1 {
+      margin: 10rem 0 1rem;
+      color: #9fc74d;
+      text-align: center;
+      font-size: 8rem;
+    }
+
+    h2 {
+      margin: 5rem 0 1rem;
+      color: #9fc74d;
+      text-align: center;
+      width: 100%;
+    }
+
+    h3 {
+      /* margin: 1rem 0 2rem; */
+      text-align: center;
+      width: 100%;
+    }
+
+    h3.bloc-image {
+      margin: 5rem 0 2rem;
+      font-size: 3rem;
+    }
+
+    p {
+      margin: auto;
+      max-width: 71.125rem;
+    }
+
+    a,.text-color {
+      color: #9fc74d;
+    }
+
+    .image-content {
+      margin: 0 auto 4rem;
+      max-width: 80rem;
+      max-height: 100%;
+    }
+
+    .background-transparent {
+      background: rgba(0,0,0,0.5);
+    }
+
+    .block-quote {
+      margin: 10rem auto;
+      line-height: 1.2;
+      max-width: 80%;
+    }
+
+  </style>
+</head>
+
+
+<body class="expand-v wide crop-x">
+
+  <div class="slide grid-align-center">
+    <div data-tween="outro:scaleOut:.5" class="box-center text-center pad-3">
+      <h1>Émanciper par la rédaction web</h1>
+      <h5>Une autre vision de la connaissance</h5>
+      <p data-tween="intro:slideInRight:.5:1.75" class="pad-1 text-grey">Par
+        <a href="http://bertrandkeller.info">Bertrand Keller</a>
+      </p>
+      <p class="tweendeck-hide">
+        <a href="https://twitter.com/bertrandkeller" class="btn btn-large bgr-blue-lt text-14">Suivre @bertrandkeller</a>
+      </p>
+      <div class="pad-3-top marg-3-top tweendeck-hide">
+        <button onclick="enterPresentationMode()" class="pad-4 text-36 uppercase pad-3 pulse">Activer le mode présentation</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="tweendeck-hide box-center pad-3">
+  <p>Lire et écrire sont des fondamentaux appris à l’école. L’utilisation du numérique est promu dans les écoles à travers du matériel. Mais qu’en est-il de l’écriture numérique ?</p>
+  <p>La révolution du support, celle du numérique, n’est pas seulement une question de documents qu’on peut s’échanger, d’immédiateté ou de réalité augmentée. C’est une autre manière de penser la réalisation de documentations seul ou à plusieurs.</p>
+  <p>Comment (se) former à la lecture et l’écriture numérique, quelles en sont les enjeux politiques et sociaux ? Quel pourrait être concrètement, avec quels outils, la procédure à appliquer ?</p>
+  <p>Présentation réaliste sur l’écriture numérique avec des exemples d’outils réels (générateurs de site statique) qui permettent l’édition et le partage de connaissances.</p>
+  </div>
+
+  {% for slide in site.data.slides %}
+  {% if slide.type == 'image' %}
+  <div class="slide grid-align-center text-center">
+      <div data-tween="intro:fadeIn:1">
+      {% if slide.title %}<h3 class="bloc-image">{{ slide.title }}</h3>{% endif %}
+      <img src="./images/{{ slide.image }}" alt="" class="image-content">
+      {% if slide.text %}<p>{{ slide.text | markdonify }}</p>{% endif %}
+      </div>
+  </div>
+  {% endif %}
+  {% if slide.type == 'background' %}
+  <div class="slide">
+      <div data-tween="intro:fadeIn:1" class="tweendeck-stack full-frame relative grid grid-align-center">
+        <div class="absolute-tl full-frame">
+          <img src="./images/{{ slide.image }}" alt="{{ slide.title }}" class="img-cover">
+        </div>
+        <div class="front text-white text-center">
+          <div class="pad-3 marg-3-top text-light background-transparent text-36 text-shadow">
+            {% if slide.title %}<h3>{{ slide.title }}</h3>{% endif %}
+            {% if slide.text %}<p>{{ slide.text | markdonify }}</p>{% endif %}
+          </div>
+          {% if slide.source-text %}
+          <p class="text-shadow text-light italic text-24">Source :
+              {% if slide.source-link %}<a class="text-white" href="{{ slide.source-link }}">{% endif %}{{ slide.source-text }}{% if slide.source-link %}</a>{% endif %}
+          </p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+  {% if slide.type == 'structure' %}
+  <div class="slide grid-align-top">
+      <div class="wide text-center marg-3-bottom pad-3-bottom">
+        <div data-tween="intro:fadeIn:1,3:fadeIn:.5" class="box-320 box-center marg-3-vert pad-3-vert">
+          {% if slide.number %}<h3 class="pad-2-vert text-36 border-b text-light">{{ slide.number }}</h3>{% endif %}
+          {% if slide.title %}<h3 class="pad-2-vert text-36 text-color">{{ slide.title }}</h3>{% endif %}
+        </div>
+        <div class="box-800 box-center pad-3-sides">
+          <p data-tween="intro:hide,0:show:.5,0:scaleIn:.5:.5,1:fadeOut:.25,1:hide:.25" class="pad-3 text-24 marg-3-vert">
+            {% if slide.text %}{{ slide.text | markdonify }}
+            {% if slide.source-text %}
+            <br>
+            <span>Source :
+                {% if slide.source-link %}<a href="{{ slide.source-link }}">{% endif %}{{ slide.source-text }}{% if slide.source-link %}</a>{% endif %}
+            </span>
+            {% endif %}
+          </p>{% endif %}
+          {% for point in slide.points %}
+          <div data-tween="intro:hide,{{ forloop.index }}:show:.25,{{ forloop.index }}:slideInUp:{{ forloop.index | plus: 1 }}:.25,{{ forloop.index | plus: 1 }}:fadeOut:.5,{{ forloop.index | plus: 1 }}:hide:.5" class="box-640 box-center pad-3" >
+            <h5>{{ point.title }}</h5>
+            <p class="text-24">{{ point.text }}</p>
+          </div>
+          {% endfor %}          
+        </div>
+      </div>
+    </div>
+  {% endif %}
+  {% if slide.type == 'citation' %}
+  <div class="slide grid-align-center block-quote">
+      <h3 data-tween="intro:fadeIn:.5,outro:fadeOut:.5">{{ slide.text }}</h3>
+  </div>
+  {% endif %}
+{% endfor %}
+
+
+
+
+
+
+  <!--CDN link for  TweenMax-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+
+  <script src="./js/tweendeck.js"></script>
+
+  <script>
+    var tweens = {
+      hide: function (el, dur, delay) {
+        if (typeof delay === 'undefined' || dur > delay) delay = dur;
+        if (typeof delay === 'undefined') delay = 0;
+        return TweenMax.to(el, 0, {
+          display: 'none',
+          delay: delay
+        });
+      },
+      show: function (el, dur, delay) {
+        if (typeof delay === 'undefined' || dur > delay) delay = dur;
+        if (typeof delay === 'undefined') delay = 0;
+        return TweenMax.to(el, 0, {
+          display: 'block',
+          delay: delay
+        });
+      },
+      showFlex: function (el, dur, delay) {
+        if (typeof delay === 'undefined' || dur > delay) delay = dur;
+        return TweenMax.to(el, 0, {
+          display: 'flex',
+          delay: delay
+        });
+      },
+      fadeIn: function (el, dur, delay) {
+        return TweenMax.from(el, dur, {
+          immediateRender: true,
+          opacity: 0,
+          delay: delay
+        });
+      },
+      fadeInUp: function (el, dur, delay) {
+        return TweenMax.from(el, dur, {
+          immediateRender: true,
+          opacity: 0,
+          y: 100,
+          ease: Power4.easeOut,
+          delay: delay
+        });
+      },
+      fadeOut: function (el, dur, delay) {
+        return TweenMax.to(el, dur, {
+          opacity: 0,
+          delay: delay
+        });
+      },
+      slideInLeft: function (el, dur, delay) {
+        return TweenMax.from(el, dur, {
+          immediateRender: true,
+          ease: Power4.easeOut,
+          x: -window.innerWidth,
+          delay: delay
+        });
+      },
+      slideInRight: function (el, dur, delay) {
+        return TweenMax.from(el, dur, {
+          immediateRender: true,
+          ease: Power4.easeOut,
+          x: window.innerWidth,
+          delay: delay
+        });
+      },
+      slideInUp: function (el, dur, delay) {
+        TweenMax.set(el, {
+          y: window.innerHeight
+        });
+        return TweenMax.to(el, dur, {
+          ease: Power4.easeOut,
+          y: 0,
+          delay: delay
+        });
+      },
+      slideInDown: function (el, dur, delay) {
+        TweenMax.set(el, {
+          y: -window.innerHeight
+        });
+        return TweenMax.to(el, dur, {
+          ease: Power4.easeOut,
+          y: 0,
+          delay: delay
+        });
+      },
+      slideOutLeft: function (el, dur, delay) {
+        return TweenMax.to(el, dur, {
+          ease: Power4.easeOut,
+          x: -window.innerWidth,
+          delay: delay
+        });
+      },
+      slideOutRight: function (el, dur, delay) {
+        return TweenMax.to(el, dur, {
+          ease: Power4.easeOut,
+          x: window.innerWidth,
+          delay: delay
+        });
+      },
+      slideOutUp: function (el, dur, delay) {
+        return TweenMax.to(el, dur, {
+          ease: Power4.easeOut,
+          y: window.innerHeight,
+          delay: delay
+        });
+      },
+      slideOutDown: function (el, dur, delay) {
+        return TweenMax.to(el, dur, {
+          ease: Power4.easeOut,
+          y: -window.innerHeight,
+          delay: delay
+        });
+      },
+      bounceInLeft: function (el, dur, delay) {
+        TweenMax.set(el, {
+          x: -200,
+          opacity: 0
+        });
+        return TweenMax.to(el, dur, {
+          ease: Bounce.easeOut,
+          x: 0,
+          opacity: 1,
+          delay: delay
+        });
+      },
+      bounceInRight: function (el, dur, delay) {
+        TweenMax.set(el, {
+          x: 200,
+          opacity: 0
+        });
+        return TweenMax.to(el, dur, {
+          ease: Bounce.easeOut,
+          x: 0,
+          opacity: 1,
+          delay: delay
+        });
+      },
+      bounceInUp: function (el, dur, delay) {
+        TweenMax.set(el, {
+          y: 200,
+          opacity: 0
+        });
+        return TweenMax.to(el, dur, {
+          ease: Bounce.easeOut,
+          y: 0,
+          opacity: 1,
+          delay: delay
+        });
+      },
+      bounceInDown: function (el, dur, delay) {
+        TweenMax.set(el, {
+          y: -200,
+          opacity: 0
+        });
+        return TweenMax.to(el, dur, {
+          ease: Bounce.easeOut,
+          y: 0,
+          opacity: 1,
+          delay: delay
+        });
+      },
+      elasticInUp: function (el, dur, delay) {
+        TweenMax.set(el, {
+          y: 200,
+          opacity: 0
+        });
+        return TweenMax.to(el, dur, {
+          ease: Elastic.easeOut,
+          y: 0,
+          opacity: 1,
+          delay: delay
+        });
+      },
+      elasticInDown: function (el, dur, delay) {
+        TweenMax.set(el, {
+          y: -200,
+          opacity: 0
+        });
+        return TweenMax.to(el, dur, {
+          ease: Elastic.easeOut,
+          y: 0,
+          opacity: 1,
+          delay: delay
+        });
+      },
+      slideOutUp: function (el, dur, delay) {
+        return TweenMax.to(el, dur, {
+          ease: Power4.easeIn,
+          y: -window.innerHeight,
+          delay: delay
+        });
+      },
+      slideOutDown: function (el, dur, delay) {
+        return TweenMax.to(el, dur, {
+          ease: Power4.easeIn,
+          y: window.innerHeight,
+          delay: delay
+        });
+      },
+      spinIn: function (el, dur, delay) {
+        return TweenMax.from(el, dur, {
+          immediateRender: true,
+          opacity: 0,
+          ease: Power4.easeOut,
+          rotationY: -720,
+          transformOrigin: "50% 50%",
+          perspective: 2000,
+          delay: delay
+        });
+      },
+      spinOut: function (el, dur, delay) {
+        return TweenMax.to(el, dur, {
+          ease: Power4.easeOut,
+          opacity: 0,
+          rotationY: 720,
+          transformOrigin: "50% 50%",
+          perspective: 2000,
+          delay: delay
+        });
+      },
+      scaleIn: function (el, dur, delay) {
+        return TweenMax.from(el, dur, {
+          immediateRender: true,
+          ease: Back.easeOut,
+          scale: .01,
+          delay: delay
+        });
+      },
+      elasticInScale: function (el, dur, delay) {
+        return TweenMax.from(el, dur, {
+          immediateRender: true,
+          ease: Elastic.easeOut,
+          scale: .01,
+          delay: delay
+        });
+      },
+      scaleOut: function (el, dur, delay) {
+        return TweenMax.to(el, dur, {
+          ease: Back.easeIn,
+          scale: .01,
+          opacity: 0,
+          delay: delay
+        });
+      },
+      zoomIn: function (el, dur, delay) {
+        return TweenMax.from(el, dur, {
+          immediateRender: true,
+          ease: Power4.easeOut,
+          opacity: 0,
+          scale: 500,
+          delay: delay
+        });
+      },
+      zoomOut: function (el, dur, delay) {
+        return TweenMax.to(el, dur, {
+          ease: Power4.easeIn,
+          opacity: 0,
+          scale: 500,
+          delay: delay
+        });
+      },
+      rotateIn: function (el, dur, delay) {
+        return TweenMax.from(el, dur, {
+          immediateRender: true,
+          ease: Power4.easeOut,
+          opacity: 0,
+          perspective: 10,
+          transformOrigin: "50% 50%",
+          rotationZ: randomNumber(-20, 20),
+          rotationY: randomNumber(-60, 60),
+          rotationX: randomNumber(-30, 30),
+          delay: delay
+        });
+      },
+      rotateOut: function (el, dur, delay) {
+        return TweenMax.to(el, dur, {
+          ease: Power4.easeOut,
+          opacity: 0,
+          perspective: 10,
+          transformOrigin: "50% 50%",
+          rotationZ: randomNumber(-20, 20),
+          rotationY: randomNumber(-60, 60),
+          rotationX: randomNumber(-30, 30),
+          delay: delay
+        });
+      },
+      tossInUp: function (el, dur, delay) {
+        return TweenMax.from(el, dur, {
+          immediateRender: true,
+          y: window.innerHeight,
+          opacity: 0,
+          ease: Power4.easeInOut,
+          x: randomNumber(-600, 600),
+          rotation: 720,
+          delay: delay
+        });
+      },
+      fallOut: function (el, dur, delay) {
+        return TweenMax.from(el, dur, {
+          y: window.innerHeight,
+          ease: Linear.none,
+          rotation: randomNumber(-30, 30),
+          delay: delay
+        });
+      },
+      swingIn: function (el, dur, delay) {
+        var swingIn = new TimelineMax();
+        swingIn.add(TweenMax.from(el, dur / 10, {
+          immediateRender: true,
+          opacity: 0,
+          delay: delay
+        }), 0);
+        swingIn.add(TweenMax.from(el, dur, {
+          immediateRender: true,
+          ease: Elastic.easeOut,
+          rotationX: -90,
+          transformOrigin: "50% 0%",
+          perspective: 4000,
+          delay: delay
+        }), 0);
+        return swingIn;
+      },
+      cssFrom: function (el, dur, delay, params) {
+        var cssProp = {};
+        cssProp[params[0]] = params[1];
+        return TweenMax.from(el, dur, {
+          immediateRender: true,
+          ease: Power4.easeOut,
+          css: cssProp,
+          delay: delay
+        });
+      },
+      cssTo: function (el, dur, delay, params) {
+        var cssProp = {};
+        cssProp[params[0]] = params[1];
+        return TweenMax.to(el, dur, {
+          ease: Power4.easeOut,
+          css: cssProp,
+          delay: delay
+        });
+      }
+    }
+
+    function randomNumber(min, max) {
+      return Math.floor(Math.random() * (1 + max - min) + min);
+    }
+
+    function enterPresentationMode() {
+      TweenDeck.init(document.querySelectorAll('.slide'), tweens);
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,161 @@
+- type: image
+  title: 'Pourcentages de jeunes en difficulté de lecture selon le département'
+  image: emancipation-alphabetisation-2000.jpg
+  source-text: Illettrisme en France
+  source-link: https://www.actualitte.com/article/monde-edition/illettrisme-en-france-l-outre-mer-en-grande-difficulte/83849
+
+- type: image
+  title: 'Carte alphabétisation en France 1790'
+  image: emancipation-alphabetisation-1790.png
+
+- type: image
+  title: 'Carte demande d’enseignement en France 1790'
+  image: emancipation-demandes-scolaire-1790.png
+
+- type: background
+  title: 'La mémoire'
+  text: >-
+    La doctrine des Druides devait demeurer secrète et leur édu­cation était fondée sur des exercices de mémoire, à travers des poèmes rythmés résumant l'essentiel de leur philosophie. Ils n'ont jamais rien écrit car l'usage de l'écriture était formellement interdit.
+  image: emancipation-druide.jpg
+  # source-text: Illettrisme en France
+  # source-link: https://www.actualitte.com/article/monde-edition/illettrisme-en-france-l-outre-mer-en-grande-difficulte/83849
+
+- type: structure
+  title: 'L’alphabétisation'
+  number: 1
+  text: >-
+    « L’ensemble des signes graphiques d'une langue disposés suivant l'ordre établi ou un petit livre qui, dans la méthode traditionnelle, contient les premiers exercices de lecture »
+  source-text: Le Vocabulaire de la Langue Pédagogique (1971)
+  # source-link: https://www.actualitte.com/article/monde-edition/illettrisme-en-france-l-outre-mer-en-grande-difficulte/83849
+  points:
+    - title: Fonctionnelle
+      text: « Une personne qui a acquis les connaissances et compétences indispensables à l’exercice de toutes les activités où l’alphabétisation est nécessaire pour jouer efficacement un rôle dans son groupe et sa communauté »
+    - title: Conscientisante
+      text: « Elle repose sur une relation égalitaire entre l’intervenant(e) et l’apprenant(e) afin d’encourager l’émergence des capacités critiques, et donc transformatrices de la réalité, de ces derniers. »
+    - title: Émotionnelle
+      text: « L’alphabétisation émotionnelle consiste à enseigner ce que sont les émotions, à quoi elles servent et comment elles sont exprimées. »
+
+- type: background
+  title: 'L’esprit'
+  text: >-
+    C'est la vie qui nous apprend et non l'école
+  image: emancipation-couture.jpg
+  source-text: Sénèque
+  #source-link: https://www.actualitte.com/article/monde-edition/illettrisme-en-france-l-outre-mer-en-grande-difficulte/83849
+
+- type: structure
+  title: 'L’école'
+  number: 2
+  text: >-
+    Le mot grec scholê désignait le loisir, le repos, la cessation des fatigues physiques, et, par extension, le moment propice à l'activité de l'esprit, à la lecture, aux arts, à l'étude.
+  source-text: Dictionnaire Ferdinand Buisson
+  source-link: http://www.inrp.fr/edition-electronique/lodel/dictionnaire-ferdinand-buisson/document.php?id=2616
+  points:
+    - title: Monastique
+      text: « À celle-ci reste confiée massivement la transmission des textes, de préserver une religion souvent menacée par des paganismes divers »
+    - title: IIIè république
+      text: « Tout comme la colonisation prétend ”civiliser les races inférieures”, l’école publique est censée élever tous les Français au rang de citoyens. »
+    - title: Libertaire
+      text: « L’enfant n’appartient ni à Dieu, ni à l’État, ni à sa famille, mais à lui-même »
+
+- type: background
+  title: 'L’humain'
+  text: >-
+    "Les seuls animaux capables de coopérer de façon flexible et en très grand nombre, nous pouvons créer et croire à la fiction, aux histoires fictives".
+  image: emancipation-cercle.jpg
+  source-text: Yuval Noah Harari
+  #source-link: https://www.actualitte.com/article/monde-edition/illettrisme-en-france-l-outre-mer-en-grande-difficulte/83849
+
+- type: structure
+  title: 'L’enseignement'
+  number: 3
+  text: >-
+    Un comportement par lequel un animal a l’intention qu’un autre apprenne une habileté ou acquière une information ou connaissance qu’il n’avait pas précédemment.
+  source-text: Kruger & Tomasello (1996)
+  source-link: https://journals.openedition.org/rfp/2098
+  points:
+    - title: Éducation nouvelle
+      text: « Elle prône une éducation globale, accordant une importance égale aux différents domaines éducatifs ; intellectuels et artistiques, mais également physiques, manuels et sociaux. L’apprentissage de la vie sociale est considéré comme essentiel »
+    - title: Société sans école
+      text: « Le but qu’il faut poursuivre, c’est d’assurer à tous des possibilités éducatives égales. Confondre cet objectif et la scolarité obligatoire, c’est confondre le salut et l’Église. L’école est devenue la religion mondiale d’un prolétariat modernisé et elle offre ses vaines promesses de salut aux pauvres de l’ère technologique »
+    - title: Paul Feller
+      text: « Pour battre bien le fer sur l’enclume, il faut épouser soi-même le sol comme elle-même qui, par son billot, fait corps avec le cœur de la planète. »
+
+- type: background
+  title: L’écriture
+  text: >-
+    Moyen de communication qui représente le langage à travers l'inscription de signes sur des supports variés
+  image: emancipation-ecriture-cuneiforme.jpg
+  source-text: Wikipedia - Écriture
+  source-link: https://fr.wikipedia.org/wiki/Écriture
+
+- type: structure
+  title: 'Le numérique'
+  number: 4
+  text: >-
+    Le numérique fonctionne comme une bombe à fragmentation car il explose le contenu en unités arbitraires par rapport au sens.
+  source-text: Jean-Charles Doucet
+  source-link: http://docplayer.fr/66592717-Le-support-numerique-theorie-du-support-archives-et-supports-les-principes.html
+  points:
+    - title: Un support
+      text: « Les traces ou les données qui s'enregistrent derrière une information d'un dispositif technique créent des liens entre la rédaction dans le passé et la rédaction dans le présent en nous orientant vers le futur »
+    - title: Des inscriptions
+      text: « Le système binaire le plus courant est la base deux mathématique, permettant de représenter des nombres à l’aide de la numération de position avec seulement deux chiffres => le 0 et le 1. »
+    - title: Une lecture
+      text: « En revanche, l'engagement physique s'accroît, car le lecteur devient manipulateur et doit "agir" la machine à des fins purement fonctionnelles.7» Ainsi, le lecteur peut agir et ou interagir tout au long de son parcours de lecture »
+
+- type: citation
+  text: >-
+    Le gap entre l’homme et la machine se situe dans les sentiments, la conscience sociale.
+
+- type: background
+  title: Les métadonnées
+  text: >-
+    Les métadonnées sont la carte d’identité d’un document. Elles permettent de l’identifier, de le décrire, d’expliquer l’origine de sa création, son utilité et ses destinataires.
+  image: emancipation-api-1.jpg
+  source-text: Métadonnées
+  source-link: http://www.enssib.fr/le-dictionnaire/metadonnees
+
+- type: structure
+  title: 'Les outils'
+  number: 5
+  text: >-
+    Le contenu est donc interprétable par l’homme et la machine, chacun via ce qui lui est destiné :
+    * l’humain interprète le contenu signifiant numérisé ;
+    * la machine interprète les balises ;
+  # source-text: Jean-Charles Doucet
+  # source-link: http://docplayer.fr/66592717-Le-support-numerique-theorie-du-support-archives-et-supports-les-principes.html
+  points:
+    - title: Le web
+      text: Les traces ou les données qui s'enregistrent derrière une information d'un dispositif technique créent des liens entre la rédaction dans le passé et la rédaction dans le présent en nous orientant vers le futur.
+    - title: Gestion de versions
+      text: Permet de stocker un ensemble de fichiers en conservant la chronologie de toutes les modifications qui ont été effectuées dessus. Il permet notamment de retrouver les différentes versions d'un lot de fichiers connexes.
+    - title: Le Markdown
+      text: En revanche, l'engagement physique s'accroît, car le lecteur devient manipulateur et doit "agir" la machine à des fins purement fonctionnelles.7» Ainsi, le lecteur peut agir et ou interagir tout au long de son parcours de lecture.
+
+- type: background
+  title: Collaboration
+  text: >-
+    Il n’est de fertile que la grande collaboration de l’un à travers l’autre. Et le geste manqué sert le geste qui réussit. Et le geste qui réussit montre le but qu’ils poursuivaient ensemble à celui qui a manqué le sien.
+  image: emancipation-collaboration.jpg
+  source-text: Citadelle, chap. IX. - Saint-Exupéry
+  #source-link: http://www.enssib.fr/le-dictionnaire/metadonnees
+
+- type: structure
+  title: 'Les usages'
+  number: 6
+  text: >-
+    « Le support technique devient alors une prothèse cognitive, un processus d'extériorisation, qui permet l'anticipation et la constitution de modes nouveaux de représentation »
+  source-text: Bernard Stiegler, 1994
+  source-link: https://stph.scenari-community.org/doc/the/co/docUC04.html
+  points:
+    - title: L’édition
+      text: Livres numériques, journaux citoyens
+    - title: La documentation
+      text: Procédures de travail, corpus scientifique
+    - title: L’expérimentation
+      text: Retours d'expériences, suivi d'un événement
+
+- type: citation
+  text: >-
+    Merci
