@@ -1,17 +1,30 @@
-# TweenDeck
+# Émanciper par la rédaction web
 
-Next level animation for web presentations.
+** Présentation réalisées avec Tweendeck**  
+Documentation [johnpolacek.github.io/tweendeck](https://johnpolacek.github.io/tweendeck/).
 
-View the demo/docs at [johnpolacek.github.io/tweendeck](https://johnpolacek.github.io/tweendeck/).
+## Objectifs de la présentation
 
-TweenDeck is powered by the [Greensock Animation Platform (GSAP)](https://greensock.com/) which is its only dependency.
+* L’alphabétisation relève de plusieurs facteurs
+* Nous sommes dans un mode de pensée asservi à la machine.
+* Le support numérique explose les contenus
+* S’émanciper et émanciper en acceptant la multiplicité
 
-*Note: Greensock has plugins like [SplitText](https://greensock.com/SplitText) and [MorphSVG](https://greensock.com/morphSVG) that are exclusive to Greensock members. For truly next-level animations, I highly recommend becoming joining [Club Greensock](https://greensock.com/club/).*
+## Plan
 
-<br>
-**TweenDeck Examples:**
+1. L’alphabétisation
+2. L’école
+3. L’enseignement
+4. L'écriture numérique
+5. Les outils
+6. Les usages
 
-* [Introducing Tweendeck](http://johnpolacek.com/introducing-tweendeck/)
-* [Rethinking CSS](http://johnpolacek.com/rethinking/)
+## Sujet de la présentation
 
+Lire et écrire sont des fondamentaux appris à l’école. L’utilisation du numérique est promu dans les écoles à travers du matériel. Mais qu’en est-il de l’écriture numérique ?
 
+La révolution du support, celle du numérique, n’est pas seulement une question de documents qu’on peut s’échanger, d’immédiateté ou de réalité augmentée. C’est une autre manière de penser la réalisation de documentations seul ou à plusieurs.
+
+Comment (se) former à la lecture et l’écriture numérique, quelles en sont les enjeux politiques et sociaux ? Quel pourrait être concrètement, avec quels outils, la procédure à appliquer ?
+
+Présentation réaliste sur l’écriture numérique avec des exemples d’outils réels (générateurs de site statique) qui permettent l’édition et le partage de connaissances.
