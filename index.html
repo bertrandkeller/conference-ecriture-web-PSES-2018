@@ -7,8 +7,8 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>TweenDeck</title>
-  <meta name="description" content="Next level animation for web presentations">
+  <title>Émanciper par la rédaction web</title>
+  <meta name="description" content="Une autre vision de la connaissance">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,700,700i&amp;subset=latin-ext" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
@@ -176,6 +176,17 @@
   {% if slide.type == 'citation' %}
   <div class="slide grid-align-center block-quote">
       <h3 data-tween="intro:fadeIn:.5,outro:fadeOut:.5">{{ slide.text }}</h3>
+  </div>
+  {% endif %}
+  {% if slide.type == 'code' %}
+  <div class="slide grid-align-center">
+    <div data-tween="1:fadeIn:1:.5:.25,2:fadeOut:.25,2:hide:.25" class="pad-3-bottom marg-3-bottom pad-3-sides">
+<pre class="box-720 box-center pad-2-vert pad-3-sides marg-2-bottom bgr-grey text-left text-14">
+<code>
+{{ slide.text }}
+</code>
+</pre>
+    </div>
   </div>
   {% endif %}
 {% endfor %}

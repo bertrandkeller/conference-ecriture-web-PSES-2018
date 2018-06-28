@@ -1,3 +1,4 @@
+
 - type: headline
   title: 'Émanciper par la rédaction web'
   subtitle: Une autre vision de la connaissance
@@ -143,6 +144,23 @@
       text: Permet de stocker un ensemble de fichiers en conservant la chronologie de toutes les modifications qui ont été effectuées dessus. Il permet notamment de retrouver les différentes versions d’un lot de fichiers connexes.
     - title: Le Markdown
       text: Langage de balisage léger créé par John Gruber en 2004. Son but est d'offrir une syntaxe facile à lire et à écrire.
+
+- type: code
+  text: >-
+    # Titre 1
+
+    ## Titre 2
+
+    Lorem Elsass ipsum ornare chambon gewurztraminer hopla merci vielmols Miss Dahlias.
+
+    ### Titre 3
+
+    * Choucroute
+
+    * Clous de girofle
+
+    * Moutarde
+
 
 - type: background
   title: Collaboration
