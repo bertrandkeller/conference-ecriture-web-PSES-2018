@@ -62,6 +62,9 @@
     .block-quote {
       margin: 10rem auto;
       line-height: 1.2;
+    }
+
+    .block-quote > * {
       max-width: 80%;
     }
 
@@ -71,21 +74,25 @@
 
 <body class="expand-v wide crop-x">
 
+  {% for slide in site.data.slides %}
+  {% if slide.type == 'headline' %}
   <div class="slide grid-align-center">
     <div data-tween="outro:scaleOut:.5" class="box-center text-center pad-3">
-      <h1>Émanciper par la rédaction web</h1>
-      <h5>Une autre vision de la connaissance</h5>
+      <h1>{{ slide.title }}</h1>
+      <h5>{{ slide.subtitle }}</h5>
       <p data-tween="intro:slideInRight:.5:1.75" class="pad-1 text-grey">Par
-        <a href="http://bertrandkeller.info">Bertrand Keller</a>
+        <a href="{{ slide.social[0]link }}">{{ slide.social[0]title }}</a>
       </p>
       <p class="tweendeck-hide">
-        <a href="https://twitter.com/bertrandkeller" class="btn btn-large bgr-blue-lt text-14">Suivre @bertrandkeller</a>
+        <a href="https://twitter.com/{{ slide.social[1]title }}" class="btn btn-large bgr-blue-lt text-14">Suivre @{{ slide.social[1]title }}</a>
       </p>
       <div class="pad-3-top marg-3-top tweendeck-hide">
-        <button onclick="enterPresentationMode()" class="pad-4 text-36 uppercase pad-3 pulse">Activer le mode présentation</button>
+        <button onclick="enterPresentationMode()" class="pad-4 text-36 uppercase pad-3 pulse">{{ slide.link-activate }}</button>
       </div>
     </div>
   </div>
+  {% endif %}
+  {% endfor %}
 
   <div class="tweendeck-hide box-center pad-3">
   <p>Lire et écrire sont des fondamentaux appris à l’école. L’utilisation du numérique est promu dans les écoles à travers du matériel. Mais qu’en est-il de l’écriture numérique ?</p>
@@ -100,7 +107,7 @@
       <div data-tween="intro:fadeIn:1">
       {% if slide.title %}<h3 class="bloc-image">{{ slide.title }}</h3>{% endif %}
       <img src="./images/{{ slide.image }}" alt="" class="image-content">
-      {% if slide.text %}<p>{{ slide.text | markdonify }}</p>{% endif %}
+      {% if slide.text %}{{ slide.text | markdownify }}{% endif %}
       </div>
   </div>
   {% endif %}
@@ -113,7 +120,7 @@
         <div class="front text-white text-center">
           <div class="pad-3 marg-3-top text-light background-transparent text-36 text-shadow">
             {% if slide.title %}<h3>{{ slide.title }}</h3>{% endif %}
-            {% if slide.text %}<p>{{ slide.text | markdonify }}</p>{% endif %}
+            {% if slide.text %}<p>{{ slide.text | markdownify }}</p>{% endif %}
           </div>
           {% if slide.source-text %}
           <p class="text-shadow text-light italic text-24">Source :
@@ -127,18 +134,18 @@
   {% if slide.type == 'structure' %}
   <div class="slide grid-align-top">
       <div class="wide text-center marg-3-bottom pad-3-bottom">
-        <div data-tween="intro:fadeIn:1,3:fadeIn:.5" class="box-320 box-center marg-3-vert pad-3-vert">
+        <div data-tween="intro:fadeIn:1,outro:fadeIn:.5" class="box-320 box-center marg-3-vert pad-3-vert">
           {% if slide.number %}<h3 class="pad-2-vert text-36 border-b text-light">{{ slide.number }}</h3>{% endif %}
           {% if slide.title %}<h3 class="pad-2-vert text-36 text-color">{{ slide.title }}</h3>{% endif %}
         </div>
         <div class="box-800 box-center pad-3-sides">
           <p data-tween="intro:hide,0:show:.5,0:scaleIn:.5:.5,1:fadeOut:.25,1:hide:.25" class="pad-3 text-24 marg-3-vert">
-            {% if slide.text %}{{ slide.text | markdonify }}
+            {% if slide.text %}{{ slide.text }}
             {% if slide.source-text %}
             <br>
-            <span>Source :
+            <em><strong>Source :</strong>
                 {% if slide.source-link %}<a href="{{ slide.source-link }}">{% endif %}{{ slide.source-text }}{% if slide.source-link %}</a>{% endif %}
-            </span>
+            </em>
             {% endif %}
           </p>{% endif %}
           {% for point in slide.points %}
@@ -157,10 +164,6 @@
   </div>
   {% endif %}
 {% endfor %}
-
-
-
-
 
 
   <!--CDN link for  TweenMax-->
