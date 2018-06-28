@@ -12,12 +12,12 @@ Documentation [johnpolacek.github.io/tweendeck](https://johnpolacek.github.io/tw
 
 ## Plan
 
-1. L’alphabétisation
-2. L’école
-3. L’enseignement
-4. L'écriture numérique
-5. Les outils
-6. Les usages
+1. L’alphabétisation :: pas si simple
+2. L’école :: Orientée machine
+3. L’enseignement :: On peut apprendre de plein de façons - pas forcément en langage machinique
+4. L'écriture numérique :: Explose les contenus
+5. Les outils :: Pour l’homme et la machine (et pas que la machine)
+6. Les usages :: La technique est là. On peut cumuler du savoir de manière pérenne.
 
 ## Sujet de la présentation
 

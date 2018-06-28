@@ -117,7 +117,7 @@
     - title: Des inscriptions
       text: « Le système binaire le plus courant est la base deux mathématique, permettant de représenter des nombres à l’aide de la numération de position avec seulement deux chiffres => le 0 et le 1. »
     - title: Une lecture
-      text: « En revanche, l’engagement physique s’accroît, car le lecteur devient manipulateur et doit "agir" la machine à des fins purement fonctionnelles. » Ainsi, le lecteur peut agir et ou interagir tout au long de son parcours de lecture »
+      text: « En revanche, l’engagement physique s’accroît, car le lecteur devient manipulateur et doit "agir" la machine à des fins purement fonctionnelles. Ainsi, le lecteur peut agir et ou interagir tout au long de son parcours de lecture »
 
 - type: background
   title: Les métadonnées
@@ -138,11 +138,11 @@
   # source-link: http://docplayer.fr/66592717-Le-support-numerique-theorie-du-support-archives-et-supports-les-principes.html
   points:
     - title: Le web
-      text:
+      text: Ensemble des données reliées par des liens hypertextes, sur Internet.
     - title: Gestion de versions
       text: Permet de stocker un ensemble de fichiers en conservant la chronologie de toutes les modifications qui ont été effectuées dessus. Il permet notamment de retrouver les différentes versions d’un lot de fichiers connexes.
     - title: Le Markdown
-      text:
+      text: Langage de balisage léger créé par John Gruber en 2004. Son but est d'offrir une syntaxe facile à lire et à écrire.
 
 - type: background
   title: Collaboration
@@ -169,4 +169,8 @@
 
 - type: citation
   text: >-
-    Comment (se) former à la lecture et l’écriture numérique, quelles en sont les enjeux politiques et sociaux ?<br>Quel pourrait être concrètement, avec quels outils, la procédure à appliquer ?
+    Comment (se) former à la lecture et l’écriture numérique, quelles en sont les enjeux politiques et sociaux ?
+
+- type: citation
+  text: >-
+    Quel pourrait être concrètement, avec quels outils, la procédure à appliquer ?
