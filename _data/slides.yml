@@ -1,5 +1,16 @@
+- type: headline
+  title: 'Émanciper par la rédaction web'
+  subtitle: Une autre vision de la connaissance
+  social:
+    - title: Bertrand Keller
+      link: http://bertrandkeller.info
+      type: website
+    - title: bertrandkeller
+      type: twitter
+  link-activate: Activer le mode présentation
+
 - type: image
-  title: 'Pourcentages de jeunes en difficulté de lecture selon le département'
+  title: 'Jeunes en difficulté de lecture par département'
   image: emancipation-alphabetisation-2000.jpg
   source-text: Illettrisme en France
   source-link: https://www.actualitte.com/article/monde-edition/illettrisme-en-france-l-outre-mer-en-grande-difficulte/83849
@@ -15,7 +26,7 @@
 - type: background
   title: 'La mémoire'
   text: >-
-    La doctrine des Druides devait demeurer secrète et leur édu­cation était fondée sur des exercices de mémoire, à travers des poèmes rythmés résumant l'essentiel de leur philosophie. Ils n'ont jamais rien écrit car l'usage de l'écriture était formellement interdit.
+    La doctrine des Druides devait demeurer secrète et leur édu­cation était fondée sur des exercices de mémoire, à travers des poèmes rythmés résumant l’essentiel de leur philosophie. Ils n’ont jamais rien écrit car l’usage de l’écriture était formellement interdit.
   image: emancipation-druide.jpg
   # source-text: Illettrisme en France
   # source-link: https://www.actualitte.com/article/monde-edition/illettrisme-en-france-l-outre-mer-en-grande-difficulte/83849
@@ -24,7 +35,7 @@
   title: 'L’alphabétisation'
   number: 1
   text: >-
-    « L’ensemble des signes graphiques d'une langue disposés suivant l'ordre établi ou un petit livre qui, dans la méthode traditionnelle, contient les premiers exercices de lecture »
+    « L’ensemble des signes graphiques d’une langue disposés suivant l’ordre établi ou un petit livre qui, dans la méthode traditionnelle, contient les premiers exercices de lecture »
   source-text: Le Vocabulaire de la Langue Pédagogique (1971)
   # source-link: https://www.actualitte.com/article/monde-edition/illettrisme-en-france-l-outre-mer-en-grande-difficulte/83849
   points:
@@ -38,7 +49,7 @@
 - type: background
   title: 'L’esprit'
   text: >-
-    C'est la vie qui nous apprend et non l'école
+    C’est la vie qui nous apprend et non l’école
   image: emancipation-couture.jpg
   source-text: Sénèque
   #source-link: https://www.actualitte.com/article/monde-edition/illettrisme-en-france-l-outre-mer-en-grande-difficulte/83849
@@ -47,7 +58,7 @@
   title: 'L’école'
   number: 2
   text: >-
-    Le mot grec scholê désignait le loisir, le repos, la cessation des fatigues physiques, et, par extension, le moment propice à l'activité de l'esprit, à la lecture, aux arts, à l'étude.
+    Le mot grec scholê désignait le loisir, le repos, la cessation des fatigues physiques, et, par extension, le moment propice à l’activité de l’esprit, à la lecture, aux arts, à l’étude.
   source-text: Dictionnaire Ferdinand Buisson
   source-link: http://www.inrp.fr/edition-electronique/lodel/dictionnaire-ferdinand-buisson/document.php?id=2616
   points:
@@ -81,10 +92,14 @@
     - title: Paul Feller
       text: « Pour battre bien le fer sur l’enclume, il faut épouser soi-même le sol comme elle-même qui, par son billot, fait corps avec le cœur de la planète. »
 
+- type: citation
+  text: >-
+    Le gap entre l’homme et la machine se situe dans les sentiments, la conscience sociale.
+
 - type: background
   title: L’écriture
   text: >-
-    Moyen de communication qui représente le langage à travers l'inscription de signes sur des supports variés
+    Moyen de communication qui représente le langage à travers l’inscription de signes sur des supports variés
   image: emancipation-ecriture-cuneiforme.jpg
   source-text: Wikipedia - Écriture
   source-link: https://fr.wikipedia.org/wiki/Écriture
@@ -98,15 +113,11 @@
   source-link: http://docplayer.fr/66592717-Le-support-numerique-theorie-du-support-archives-et-supports-les-principes.html
   points:
     - title: Un support
-      text: « Les traces ou les données qui s'enregistrent derrière une information d'un dispositif technique créent des liens entre la rédaction dans le passé et la rédaction dans le présent en nous orientant vers le futur »
+      text: « Les traces ou les données qui s’enregistrent derrière une information d’un dispositif technique créent des liens entre la rédaction dans le passé et la rédaction dans le présent en nous orientant vers le futur »
     - title: Des inscriptions
       text: « Le système binaire le plus courant est la base deux mathématique, permettant de représenter des nombres à l’aide de la numération de position avec seulement deux chiffres => le 0 et le 1. »
     - title: Une lecture
-      text: « En revanche, l'engagement physique s'accroît, car le lecteur devient manipulateur et doit "agir" la machine à des fins purement fonctionnelles.7» Ainsi, le lecteur peut agir et ou interagir tout au long de son parcours de lecture »
-
-- type: citation
-  text: >-
-    Le gap entre l’homme et la machine se situe dans les sentiments, la conscience sociale.
+      text: « En revanche, l’engagement physique s’accroît, car le lecteur devient manipulateur et doit "agir" la machine à des fins purement fonctionnelles. » Ainsi, le lecteur peut agir et ou interagir tout au long de son parcours de lecture »
 
 - type: background
   title: Les métadonnées
@@ -120,18 +131,18 @@
   title: 'Les outils'
   number: 5
   text: >-
-    Le contenu est donc interprétable par l’homme et la machine, chacun via ce qui lui est destiné :
-    * l’humain interprète le contenu signifiant numérisé ;
-    * la machine interprète les balises ;
+    Le contenu est donc interprétable par l’homme et la machine, chacun via ce qui lui est destiné :<br>
+    * l’humain interprète le contenu signifiant numérisé ;<br>
+    * la machine interprète les balises ;<br>
   # source-text: Jean-Charles Doucet
   # source-link: http://docplayer.fr/66592717-Le-support-numerique-theorie-du-support-archives-et-supports-les-principes.html
   points:
     - title: Le web
-      text: Les traces ou les données qui s'enregistrent derrière une information d'un dispositif technique créent des liens entre la rédaction dans le passé et la rédaction dans le présent en nous orientant vers le futur.
+      text:
     - title: Gestion de versions
-      text: Permet de stocker un ensemble de fichiers en conservant la chronologie de toutes les modifications qui ont été effectuées dessus. Il permet notamment de retrouver les différentes versions d'un lot de fichiers connexes.
+      text: Permet de stocker un ensemble de fichiers en conservant la chronologie de toutes les modifications qui ont été effectuées dessus. Il permet notamment de retrouver les différentes versions d’un lot de fichiers connexes.
     - title: Le Markdown
-      text: En revanche, l'engagement physique s'accroît, car le lecteur devient manipulateur et doit "agir" la machine à des fins purement fonctionnelles.7» Ainsi, le lecteur peut agir et ou interagir tout au long de son parcours de lecture.
+      text:
 
 - type: background
   title: Collaboration
@@ -145,7 +156,7 @@
   title: 'Les usages'
   number: 6
   text: >-
-    « Le support technique devient alors une prothèse cognitive, un processus d'extériorisation, qui permet l'anticipation et la constitution de modes nouveaux de représentation »
+    « Le support technique devient alors une prothèse cognitive, un processus d’extériorisation, qui permet l’anticipation et la constitution de modes nouveaux de représentation »
   source-text: Bernard Stiegler, 1994
   source-link: https://stph.scenari-community.org/doc/the/co/docUC04.html
   points:
@@ -154,8 +165,8 @@
     - title: La documentation
       text: Procédures de travail, corpus scientifique
     - title: L’expérimentation
-      text: Retours d'expériences, suivi d'un événement
+      text: Retours d’expériences, suivi d’un événement
 
 - type: citation
   text: >-
-    Merci
+    Comment (se) former à la lecture et l’écriture numérique, quelles en sont les enjeux politiques et sociaux ?<br>Quel pourrait être concrètement, avec quels outils, la procédure à appliquer ?
