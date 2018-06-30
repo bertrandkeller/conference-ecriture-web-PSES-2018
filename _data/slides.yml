@@ -145,23 +145,6 @@
     - title: Le Markdown
       text: Langage de balisage léger créé par John Gruber en 2004. Son but est d'offrir une syntaxe facile à lire et à écrire.
 
-- type: code
-  text: >-
-    # Titre 1
-
-    ## Titre 2
-
-    Lorem Elsass ipsum ornare chambon gewurztraminer hopla merci vielmols Miss Dahlias.
-
-    ### Titre 3
-
-    * Choucroute
-
-    * Clous de girofle
-
-    * Moutarde
-
-
 - type: background
   title: Collaboration
   text: >-
@@ -187,8 +170,4 @@
 
 - type: citation
   text: >-
-    Comment (se) former à la lecture et l’écriture numérique, quelles en sont les enjeux politiques et sociaux ?
-
-- type: citation
-  text: >-
-    Quel pourrait être concrètement, avec quels outils, la procédure à appliquer ?
+    Merci

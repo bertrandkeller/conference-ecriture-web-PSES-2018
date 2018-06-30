@@ -15,8 +15,22 @@
   <link rel="stylesheet" href="./css/style.css">
   <link rel="shortcut icon" href="favicon.ico">
   <style>
+    @page {
+      size: A4 landscape;
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-inside: 0;
+      margin-outside: 0;
+    }
+    .slide {
+      page-break-before: always;
+      min-height: 100vh;
+    }
+    .front {
+      margin: 12rem 0;
+    }
     h1 {
-      margin: 10rem 0 1rem;
+      margin: 6cm 0 1rem;
       color: #9fc74d;
       text-align: center;
       font-size: 8rem;
@@ -50,16 +64,31 @@
     }
 
     .image-content {
-      margin: 0 auto 4rem;
-      max-width: 80rem;
-      max-height: 100%;
+      margin: 0 auto 0;
+      height: 100%;
+    }
+
+    .full-frame {
+      min-width: 100%;
+      min-height: 100%;
+    }
+
+    .full-frame {
+      min-width: 100%;
+      min-height: 100%;
     }
 
     .background-transparent {
       background: rgba(0,0,0,0.5);
     }
 
+    .block-background {
+      height: 100%;
+      min-height: 21cm;
+    }
+
     .block-quote {
+      margin: 7cm auto;
       line-height: 1.2;
       color: #9fc74d;
     }
@@ -101,20 +130,10 @@
       <p class="tweendeck-hide">
         <a href="https://twitter.com/{{ slide.social[1]title }}" class="btn btn-large bgr-blue-lt text-14">Suivre @{{ slide.social[1]title }}</a>
       </p>
-      <div class="pad-3-top marg-3-top tweendeck-hide">
-        <button onclick="enterPresentationMode()" class="pad-4 text-36 uppercase pad-3 pulse">{{ slide.link-activate }}</button>
-      </div>
     </div>
   </div>
   {% endif %}
   {% endfor %}
-
-  <div class="tweendeck-hide box-center pad-3">
-  <p>Lire et écrire sont des fondamentaux appris à l’école. L’utilisation du numérique est promu dans les écoles à travers du matériel. Mais qu’en est-il de l’écriture numérique ?</p>
-  <p>La révolution du support, celle du numérique, n’est pas seulement une question de documents qu’on peut s’échanger, d’immédiateté ou de réalité augmentée. C’est une autre manière de penser la réalisation de documentations seul ou à plusieurs.</p>
-  <p>Comment (se) former à la lecture et l’écriture numérique, quelles en sont les enjeux politiques et sociaux ? Quel pourrait être concrètement, avec quels outils, la procédure à appliquer ?</p>
-  <p>Présentation réaliste sur l’écriture numérique avec des exemples d’outils réels (générateurs de site statique) qui permettent l’édition et le partage de connaissances.</p>
-  </div>
 
   {% for slide in site.data.slides %}
   {% if slide.type == 'image' %}
@@ -127,11 +146,11 @@
   </div>
   {% endif %}
   {% if slide.type == 'background' %}
-  <div class="slide">
+  <div class="slide block-background" style="background: url(./images/{{ slide.image }}) no-repeat 0 0">
       <div data-tween="intro:fadeIn:1" class="tweendeck-stack full-frame relative grid grid-align-center">
-        <div class="absolute-tl full-frame">
+        <!-- <div class="absolute-tl full-frame">
           <img src="./images/{{ slide.image }}" alt="{{ slide.title }}" class="img-cover">
-        </div>
+        </div> -->
         <div class="front text-white text-center">
           <div class="pad-3 marg-3-top text-light background-transparent text-36 text-shadow">
             {% if slide.title %}<h3>{{ slide.title }}</h3>{% endif %}
@@ -163,11 +182,65 @@
             </em>
             {% endif %}
           </p>{% endif %}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+  {% if slide.type == 'structure' %}
+  <div class="slide grid-align-top">
+      <div class="wide text-center marg-3-bottom pad-3-bottom">
+        <div data-tween="intro:fadeIn:1,outro:fadeIn:.5" class="box-320 box-center marg-3-vert pad-3-vert">
+          {% if slide.number %}<h3 class="pad-2-vert text-36 border-b text-light">{{ slide.number }}</h3>{% endif %}
+          {% if slide.title %}<h3 class="pad-2-vert text-36 text-color">{{ slide.title }}</h3>{% endif %}
+        </div>
+        <div class="box-800 box-center pad-3-sides">
           {% for point in slide.points %}
+          {% if forloop.index == 1 %}
           <div data-tween="intro:hide,{{ forloop.index }}:show:.25,{{ forloop.index }}:slideInUp:{{ forloop.index | plus: 1 }}:.25,{{ forloop.index | plus: 1 }}:fadeOut:.5,{{ forloop.index | plus: 1 }}:hide:.5" class="box-640 box-center pad-3" >
             <h5>{{ point.title }}</h5>
             <p class="text-24">{{ point.text }}</p>
           </div>
+          {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+  {% if slide.type == 'structure' %}
+  <div class="slide grid-align-top">
+      <div class="wide text-center marg-3-bottom pad-3-bottom">
+        <div data-tween="intro:fadeIn:1,outro:fadeIn:.5" class="box-320 box-center marg-3-vert pad-3-vert">
+          {% if slide.number %}<h3 class="pad-2-vert text-36 border-b text-light">{{ slide.number }}</h3>{% endif %}
+          {% if slide.title %}<h3 class="pad-2-vert text-36 text-color">{{ slide.title }}</h3>{% endif %}
+        </div>
+        <div class="box-800 box-center pad-3-sides">
+          {% for point in slide.points %}
+          {% if forloop.index == 2 %}
+          <div data-tween="intro:hide,{{ forloop.index }}:show:.25,{{ forloop.index }}:slideInUp:{{ forloop.index | plus: 1 }}:.25,{{ forloop.index | plus: 1 }}:fadeOut:.5,{{ forloop.index | plus: 1 }}:hide:.5" class="box-640 box-center pad-3" >
+            <h5>{{ point.title }}</h5>
+            <p class="text-24">{{ point.text }}</p>
+          </div>
+          {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+  {% if slide.type == 'structure' %}
+  <div class="slide grid-align-top">
+      <div class="wide text-center marg-3-bottom pad-3-bottom">
+        <div data-tween="intro:fadeIn:1,outro:fadeIn:.5" class="box-320 box-center marg-3-vert pad-3-vert">
+          {% if slide.number %}<h3 class="pad-2-vert text-36 border-b text-light">{{ slide.number }}</h3>{% endif %}
+          {% if slide.title %}<h3 class="pad-2-vert text-36 text-color">{{ slide.title }}</h3>{% endif %}
+        </div>
+        <div class="box-800 box-center pad-3-sides">
+          {% for point in slide.points %}
+          {% if forloop.index == 3 %}
+          <div data-tween="intro:hide,{{ forloop.index }}:show:.25,{{ forloop.index }}:slideInUp:{{ forloop.index | plus: 1 }}:.25,{{ forloop.index | plus: 1 }}:fadeOut:.5,{{ forloop.index | plus: 1 }}:hide:.5" class="box-640 box-center pad-3" >
+            <h5>{{ point.title }}</h5>
+            <p class="text-24">{{ point.text }}</p>
+          </div>
+          {% endif %}
           {% endfor %}
         </div>
       </div>
@@ -180,7 +253,7 @@
   {% endif %}
   {% if slide.type == 'code' %}
   <div class="slide grid-align-center">
-    <div data-tween="intro:fadeIn:.5,outro:fadeOut:.5" class="pad-3-bottom marg-3-bottom pad-3-sides">
+    <div data-tween="1:fadeIn:1:.5:.25,2:fadeOut:.25,2:hide:.25" class="pad-3-bottom marg-3-bottom pad-3-sides">
 <pre class="box-720 box-center pad-2-vert pad-3-sides marg-2-bottom bgr-grey text-left text-14">
 <code>
 {{ slide.text }}
